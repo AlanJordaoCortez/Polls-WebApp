@@ -8,6 +8,8 @@ urlpatterns = [
     path('questions/add/', views.QuestionCreateView.as_view()),
     #ex: /api/questions/delete/2
     path('questions/delete/<int:pk>/', views.QuestionDeleteView.as_view()),
+    #ex: /api/questions/edit/2
+    path('questions/edit/<int:pk>/', views.QuestionUpdateView.as_view()),
     #ex: /api/votes/all
     path('choices/all/', views.ChoiceReadView.as_view()),
 ]

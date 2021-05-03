@@ -19,6 +19,11 @@ class QuestionDeleteView(generics.DestroyAPIView):
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer
 
+#PUT method for questions
+class QuestionUpdateView(generics.UpdateAPIView):
+    queryset = Question.objects.all()
+    serializer_class = QuestionSerializer
+
 #GET method for choices
 class ChoiceReadView(generics.ListAPIView):
     queryset = Choice.objects.all()
